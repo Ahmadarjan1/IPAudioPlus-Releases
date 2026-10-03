@@ -1,0 +1,15 @@
+caaf9f3228c9a81bf39c3678cbe8700f1b797f093a64a4a469042e3f622820f6  v2.5.1/python3.11/aarch64/enigma2-plugin-extensions-ipaudioplus_2.5.1_aarch64_py3.11.ipk
+e4f02bb43b0ee711c7ce67ae8f4bd7c5d2c6b30c6946cc1f0b30f505cd33b9e3  v2.5.1/python3.11/arm/enigma2-plugin-extensions-ipaudioplus_2.5.1_arm_py3.11.ipk
+0881ecd4a18805a171d6c128f03d5cba496e2384dfc7060196ed24353641747c  v2.5.1/python3.11/mipsel/enigma2-plugin-extensions-ipaudioplus_2.5.1_mipsel_py3.11.ipk
+81d6af6d3c94811abd631ed4ecb51820ae7705ad65b85646dc892d27e078bcb3  v2.5.1/python3.12/aarch64/enigma2-plugin-extensions-ipaudioplus_2.5.1_aarch64_py3.12.ipk
+69620f996b26e614d87ca6b5197e9247ace66270bdd3cfddb5ca7d0c3f273fb3  v2.5.1/python3.12/arm/enigma2-plugin-extensions-ipaudioplus_2.5.1_arm_py3.12.ipk
+5efca6d739a51f5517ff809fd57a7d7983723fcb67fad80f9347e066504948f9  v2.5.1/python3.12/mipsel/enigma2-plugin-extensions-ipaudioplus_2.5.1_mipsel_py3.12.ipk
+528ed88c141c2e8d22694f0e8052f7bfbb5abdf8eb996ce931fe31671a6646f5  v2.5.1/python3.13/aarch64/enigma2-plugin-extensions-ipaudioplus_2.5.1_aarch64_py3.13.ipk
+d7ee88ee45a1d18bd0c9bb3ba2cf0e5b1972bc860df3e4162e5aecc9db6b6d31  v2.5.1/python3.13/arm/enigma2-plugin-extensions-ipaudioplus_2.5.1_arm_py3.13.ipk
+09cc90349d80960d376ee3986e75ad04e71070fe1f21abf962ee4e28a7db6389  v2.5.1/python3.13/mipsel/enigma2-plugin-extensions-ipaudioplus_2.5.1_mipsel_py3.13.ipk
+163636dd5b46174892069867944a805ad3bcbde862489d75f88b623d1ef2a4e8  v2.5.1/python3.14/aarch64/enigma2-plugin-extensions-ipaudioplus_2.5.1_aarch64_py3.14.ipk
+36ce07f71c6cbbfecb15ad82849c269a570067575310c5b6b501efd2d589bcfc  v2.5.1/python3.14/arm/enigma2-plugin-extensions-ipaudioplus_2.5.1_arm_py3.14.ipk
+557bcc4233758ca0f0c7b81dc42fb2fbd5b3bfac58e19c1cfbc7b1e51d43851e  v2.5.1/python3.9/aarch64/enigma2-plugin-extensions-ipaudioplus_2.5.1_aarch64_py3.9.ipk
+ab8c16b8a6948ac361c4ec0e9fab526c9ff7988bd85c52abf133cfbc4d65c024  v2.5.1/python3.9/arm/enigma2-plugin-extensions-ipaudioplus_2.5.1_arm_py3.9.ipk
+7ad3cff8fcb58df2094f7c62b3890a7e89fca002b0bc19a3e4d7725df9727979  v2.5.1/python3.9/mipsel/enigma2-plugin-extensions-ipaudioplus_2.5.1_mipsel_py3.9.ipk
+792424abb809d77e7b1c37bead8687fe86f6c5b1620b2d071d298dced8ed1dad  installer.sh

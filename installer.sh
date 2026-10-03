@@ -78,24 +78,27 @@ fi
 say "Downloaded ${G}$((SIZE / 1024)) KB${N}"
 
 # ---- install (the old plugin is only replaced when this works) ---------------------------
+# --nodeps: some images list another "ipaudioplus-pyX.Y" package in their feed that opkg then tries
+# to pull in (and fails to download, exit 255). Our package needs nothing but Python.
 say "${G}Installing...${N}"
-opkg install --force-reinstall --force-overwrite "$TMP_IPK" >>"$LOG" 2>&1
+opkg install --nodeps --force-reinstall --force-overwrite "$TMP_IPK" >>"$LOG" 2>&1
 RC=$?
-if [ $RC -ne 0 ]; then
-    # old releases depended on ffmpeg libraries some images do not have under these names
-    say "${Y}opkg returned $RC, retrying without dependency checks...${N}"
+if [ $RC -ne 0 ] && grep -qiE "unrecognized option|invalid option|unknown option" "$LOG"; then
     opkg install --force-reinstall --force-overwrite --force-depends "$TMP_IPK" >>"$LOG" 2>&1
     RC=$?
 fi
 rm -f "$TMP_IPK"
-if [ $RC -ne 0 ]; then
+NEW=$(opkg status "$PKG" 2>/dev/null | sed -n 's/^Version: *//p' | head -n1)
+PDIR="/usr/lib/enigma2/python/Plugins/Extensions/IPAudioPlus"
+if [ "$NEW" = "$VERSION" ] && [ -f "$PDIR/plugin.py" ] && [ -f "$PDIR/ipa_version.py" ]; then
+    [ $RC -eq 0 ] || say "${Y}opkg reported $RC, but IPAudioPlus $VERSION is installed (see $LOG).${N}"
+else
     say "${R}Installation failed (opkg exit code $RC). Last messages:${N}"
     tail -n 15 "$LOG"
     say "${C}Your previous IPAudioPlus (if any) was not removed.${N}"
+    [ $RC -ne 0 ] || RC=1
     exit $RC
 fi
-
-NEW=$(opkg status "$PKG" 2>/dev/null | sed -n 's/^Version: *//p' | head -n1)
 say "${G}IPAudioPlus ${NEW:-$VERSION} ${CHANNEL} installed successfully.${N}"
 say "${C}Restarting Enigma2...${N}"
 sleep 2

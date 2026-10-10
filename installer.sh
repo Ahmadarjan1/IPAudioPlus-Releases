@@ -5,7 +5,7 @@
 # POSIX sh (works with BusyBox ash and bash). The installed plugin is only replaced after the new
 # package was downloaded and checked; if opkg fails, the old plugin stays as it was.
 # ------------------------------------------------------------------
-VERSION="2.5.1"
+VERSION="2.6.0"
 CHANNEL="Beta"
 BASE_URL="https://raw.githubusercontent.com/Ahmadarjan1/IPAudioPlus-Releases/main"
 PKG="enigma2-plugin-extensions-ipaudioplus"
@@ -46,9 +46,6 @@ case "$RAW" in
     *)     fail "Unsupported CPU: $RAW" ;;
 esac
 say "CPU: ${G}${RAW}${N} -> package ${G}${BUCKET}${N}"
-if [ "$BUCKET" = "mipsel" ] && [ "$PY_VER" = "3.14" ]; then
-    fail "No package for MIPS boxes with Python 3.14 yet (supported on MIPS: 3.9 3.11 3.12 3.13)."
-fi
 
 IPK="${PKG}_${VERSION}_${BUCKET}_py${PY_VER}.ipk"
 URL="${BASE_URL}/v${VERSION}/python${PY_VER}/${BUCKET}/${IPK}"

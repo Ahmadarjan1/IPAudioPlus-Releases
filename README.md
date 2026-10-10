@@ -1,6 +1,6 @@
 # IPAudioPlus Releases
 
-[![Release](https://img.shields.io/badge/Release-v2.5.1%20Beta-orange.svg)](#)
+[![Release](https://img.shields.io/badge/Release-v2.6.0%20Beta-orange.svg)](#)
 [![Enigma2](https://img.shields.io/badge/Platform-Enigma2-blue.svg)](#)
 
 Official release repository for **IPAudioPlus** — live commentary audio for Enigma2 boxes, with automatic
@@ -30,24 +30,22 @@ Problems? The full log is in `/tmp/ipaudioplus_install.log` — please send it w
 
 Already on 2.4.1? The plugin offers the update by itself.
 
-## 🆕 2.5.1 Beta
+## 🆕 2.6.0 Beta
 
-- Auto-Sync v3.1: measures while the commentary keeps playing, handles weak stadium sound and stream dropouts,
-  confirms weak matches with a second measurement before applying.
-- Drift guard: keeps picture and commentary together after satellite glitches.
-- Green key after Auto-Sync: review and fine-tune the last result without measuring again.
-- Fixed correction per commentary channel (blue key).
-- Live Info: real TV channels and commentators (jdwel.com) with team flags.
-- Programme of each audio channel (beIN schedule) with a progress bar.
-- ipa_core 1.0.6 audio engine, no dependency on the image's FFmpeg libraries.
+- New interface: dark and light mode, 4 accent colours, optional horizontal layout, large text and high contrast.
+- Server list inside the main panel (AUDIO key), with server and channel icons.
+- beIN SPORTS programme guide next to every audio channel (1-9, XTRA, EN, FR, MAX).
+- Sync notification, goal alerts and match reminders.
+- "No sound?" diagnostics, QR code for the mobile remote, sync history, version history with rollback.
+- ipa_core 1.0.7 audio engine: works with the sound cards of older MIPS boxes (e.g. Vu+ Zero).
+- First package for MIPS boxes with Python 3.14 (openATV 8).
 
 ## 📦 Layout
 
 ```
 installer.sh
 version.json
-v2.5.1/python<ver>/<arm|aarch64|mipsel>/enigma2-plugin-extensions-ipaudioplus_2.5.1_<arch>_py<ver>.ipk
-v2.4.1/...   (previous release)
+v2.6.0/python<ver>/<arm|aarch64|mipsel>/enigma2-plugin-extensions-ipaudioplus_2.6.0_<arch>_py<ver>.ipk
+v2.5.1/...   (previous release)
 ```
 
-MIPS + Python 3.14: no package yet.

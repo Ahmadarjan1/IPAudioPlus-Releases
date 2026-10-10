@@ -68,7 +68,7 @@ wget -q -O "$TMP_IPK" "$URL" >>"$LOG" 2>&1 \
 fi
 [ -s "$TMP_IPK" ] || fail "Download failed. Check the internet connection of the box (and the date/time), then try again."
 SIZE=$(wc -c < "$TMP_IPK")
-MAGIC=$(head -c 7 "$TMP_IPK" 2>/dev/null)
+MAGIC=$(dd if="$TMP_IPK" bs=7 count=1 2>/dev/null)
 if [ "$SIZE" -lt 100000 ] || [ "$MAGIC" != "!<arch>" ]; then
     fail "The downloaded file is not a valid package (${SIZE} bytes). No package for Python ${PY_VER} on ${BUCKET}?"
 fi
